@@ -11,3 +11,9 @@
 - https://github.com/ionepaul/angular-plugin-architecture
 - https://github.com/alexzuza/angular-plugin-architecture
 - https://github.com/lydemann/map-plugin-demo
+
+## to read
+1. https://hacks.mozilla.org/2015/08/es6-in-depth-modules/
+2. https://angular.io/guide/ngmodule-vs-jsmodule
+3. https://angular.io/guide/bootstrapping
+4. https://angular.io/guide/entry-components
