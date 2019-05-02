@@ -17,3 +17,4 @@
 2. https://angular.io/guide/ngmodule-vs-jsmodule
 3. https://angular.io/guide/bootstrapping
 4. https://angular.io/guide/entry-components
+5. https://github.com/angular/angular/issues/20875
