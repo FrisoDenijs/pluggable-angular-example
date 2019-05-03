@@ -33,7 +33,7 @@ import { DashboardService, WidgetConfig } from '../shared';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+export class DashboardComponent implements AfterViewInit {
 
   @ViewChild('content', { read: ViewContainerRef }) content: ViewContainerRef;
 
