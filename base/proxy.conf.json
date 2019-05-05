@@ -1,9 +1,0 @@
-{
-    "/widgets-repo/*": {
-        "target": "http://localhost:4201",
-        "secure": false,
-        "pathRewrite": {
-            "^/widgets-repo": ""
-        }
-    }
-}
