@@ -22,3 +22,5 @@
 ### https://stackoverflow.com/questions/53322954/angular-7-error-referenceerror-systemjs-is-not-defined
 - https://paucls.wordpress.com/2018/05/10/angular-pluggable-architecture/
 - https://github.com/paucls/angular-pluggable-architecture
+
+*[RESOLVED](https://stackoverflow.com/a/53702437/1984657)*
