@@ -18,6 +18,7 @@
 3. https://angular.io/guide/bootstrapping
 4. https://angular.io/guide/entry-components
 5. https://github.com/angular/angular/issues/20875
+6. https://angular.io/guide/aot-compiler
 
 ## issues
 ### [SystemJS Reference Error](https://stackoverflow.com/questions/53322954/angular-7-error-referenceerror-systemjs-is-not-defined)
