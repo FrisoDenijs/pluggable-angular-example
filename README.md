@@ -1,15 +1,16 @@
 # pluggable-angular-example
 
 
-## example used
+## examples
+### JIT
 1. https://itnext.io/how-to-build-a-plugin-extensible-application-architecture-in-angular5-736890278f3f
 1. https://github.com/ionepaul/angular-plugin-architecture
+2. https://paucls.wordpress.com/2018/05/10/angular-pluggable-architecture/
+2. https://github.com/paucls/angular-pluggable-architecture
 
-## other examples
-2. https://blog.angularindepth.com/building-extensible-dynamic-pluggable-enterprise-application-with-angular-aed8979faba5
-2. https://github.com/alexzuza/angular-plugin-architecture
-3. https://christianlydemann.com/implementing-a-plugin-architecture-with-angular-and-openlayers/
-3. https://github.com/lydemann/map-plugin-demo
+### AOT
+1. https://blog.angularindepth.com/building-extensible-dynamic-pluggable-enterprise-application-with-angular-aed8979faba5
+1. https://github.com/alexzuza/angular-plugin-architecture
 
 ## to read
 1. https://hacks.mozilla.org/2015/08/es6-in-depth-modules/
@@ -19,8 +20,6 @@
 5. https://github.com/angular/angular/issues/20875
 
 ## issues
-### https://stackoverflow.com/questions/53322954/angular-7-error-referenceerror-systemjs-is-not-defined
-- https://paucls.wordpress.com/2018/05/10/angular-pluggable-architecture/
-- https://github.com/paucls/angular-pluggable-architecture
+### [SystemJS Reference Error](https://stackoverflow.com/questions/53322954/angular-7-error-referenceerror-systemjs-is-not-defined)
 
 *[RESOLVED](https://stackoverflow.com/a/53702437/1984657)*
