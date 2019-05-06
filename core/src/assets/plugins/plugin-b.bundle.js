@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/platform-browser')) :
 	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common', '@angular/platform-browser'], factory) :
-	(factory((global['plugin-a'] = {}),global.core,global.common,global.platformBrowser));
+	(factory((global['plugin-b'] = {}),global.core,global.common,global.platformBrowser));
 }(this, (function (exports,core,common,platformBrowser) { 'use strict';
 
 /*! *****************************************************************************
@@ -59,17 +59,17 @@ function __metadata(metadataKey, metadataValue) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
 }
 
-var PluginAComponent = /** @class */ (function () {
-    function PluginAComponent() {
+var PluginBComponent = /** @class */ (function () {
+    function PluginBComponent() {
     }
-    PluginAComponent = __decorate([
+    PluginBComponent = __decorate([
         core.Component({
             selector: 'plugin-a-component',
-            template: "<h3>Hi, I am the Plugin A component.</h3>"
+            template: "<h3>Hi, I am the Plugin B component.</h3>"
         }),
         __metadata("design:paramtypes", [])
-    ], PluginAComponent);
-    return PluginAComponent;
+    ], PluginBComponent);
+    return PluginBComponent;
 }());
 
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
@@ -12025,7 +12025,7 @@ function provideRouterInitializer() {
 var VERSION = new core.Version('5.2.0');
 
 var appRoutes = [
-    { path: 'plugin-a', component: PluginAComponent }
+    { path: 'plugin-b', component: PluginBComponent }
 ];
 var PluginAModule = /** @class */ (function () {
     function PluginAModule() {
@@ -12036,13 +12036,13 @@ var PluginAModule = /** @class */ (function () {
                 common.CommonModule,
                 RouterModule.forChild(appRoutes)
             ],
-            declarations: [PluginAComponent],
-            entryComponents: [PluginAComponent],
+            declarations: [PluginBComponent],
+            entryComponents: [PluginBComponent],
             providers: [{
                     provide: 'plugins',
                     useValue: [{
-                            name: 'plugin-a-component',
-                            component: PluginAComponent
+                            name: 'plugin-b-component',
+                            component: PluginBComponent
                         }],
                     multi: true
                 }]

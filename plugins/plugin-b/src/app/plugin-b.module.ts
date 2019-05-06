@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PluginAComponent } from './plugin-a.component';
+import { PluginBComponent } from './plugin-b.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: 'plugin-a', component: PluginAComponent }
+  { path: 'plugin-b', component: PluginBComponent }
 ];
 
 @NgModule({
@@ -14,13 +14,13 @@ const appRoutes: Routes = [
       appRoutes
     )
   ],
-  declarations: [PluginAComponent],
-  entryComponents: [PluginAComponent],
+  declarations: [PluginBComponent],
+  entryComponents: [PluginBComponent],
   providers: [{
      provide: 'plugins',
      useValue: [{
-       name: 'plugin-a-component',
-       component: PluginAComponent
+       name: 'plugin-b-component',
+       component: PluginBComponent
      }],
      multi: true
    }]

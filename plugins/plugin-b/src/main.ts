@@ -1,0 +1,1 @@
+export { PluginAModule } from './app/plugin-b.module';
