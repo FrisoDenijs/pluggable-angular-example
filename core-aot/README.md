@@ -1,27 +1,37 @@
-# CoreAot
+# AngularPluginArchitecture
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Example of building AOT compiled Angular plugin that can be consumed on client and server sides(SSR)
 
-## Development server
+## Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+npm install
+```
 
-## Code scaffolding
+Building shared plugin
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+npm run build:shared
+```
 
-## Build
+Building plugins
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+npm run build:plugin1
+npm run build:plugin2
+```
 
-## Running unit tests
+## Run
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Dev mode
 
-## Running end-to-end tests
+```
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Server-side
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+npm run build:ssr
+npm run serve:ssr
+```

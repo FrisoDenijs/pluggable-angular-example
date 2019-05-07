@@ -15,10 +15,6 @@
     ],
     "interface-name": false,
     "max-classes-per-file": false,
-    "max-line-length": [
-      true,
-      140
-    ],
     "member-access": false,
     "member-ordering": [
       true,
@@ -50,6 +46,7 @@
     "no-switch-case-fall-through": true,
     "no-use-before-declare": true,
     "no-var-requires": false,
+    "no-string-literal": false,
     "object-literal-key-quotes": [
       true,
       "as-needed"

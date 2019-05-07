@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "core-aot": {
+    "angular-plugin-architecture": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/core-aot",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,7 +25,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/systemjs/dist/s.js",
+              "node_modules/systemjs/dist/extras/named-register.js",
+              "node_modules/systemjs/dist/extras/amd.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -58,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "core-aot:build"
+            "browserTarget": "angular-plugin-architecture:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "core-aot:build:production"
+              "browserTarget": "angular-plugin-architecture:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "core-aot:build"
+            "browserTarget": "angular-plugin-architecture:build"
           }
         },
         "test": {
@@ -100,30 +104,99 @@
               "**/node_modules/**"
             ]
           }
-        }
-      }
-    },
-    "core-aot-e2e": {
-      "root": "e2e/",
-      "projectType": "application",
-      "prefix": "",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "core-aot:serve"
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "core-aot:serve:production"
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
             }
+          }
+        }
+      }
+    },
+    "plugins": {
+      "root": "projects/plugins/",
+      "sourceRoot": "projects/plugins/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "./builders:plugin",
+          "options": {
+            "outputPath": "dist/plugins",
+            "index": "",
+            "main": "projects/plugins/src/main.ts",
+            "polyfills": "projects/plugins/src/polyfills.ts",
+            "tsConfig": "projects/plugins/tsconfig.app.json",
+            "assets": [],
+            "styles": [],
+            "scripts": [],
+            "es5BrowserSupport": false
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [],
+              "optimization": true,
+              "outputHashing": "none",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": false,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "shared": {
+      "root": "projects/shared",
+      "sourceRoot": "projects/shared/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/shared/tsconfig.lib.json",
+            "project": "projects/shared/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/shared/src/test.ts",
+            "tsConfig": "projects/shared/tsconfig.spec.json",
+            "karmaConfig": "projects/shared/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
+            "tsConfig": [
+              "projects/shared/tsconfig.lib.json",
+              "projects/shared/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
@@ -132,5 +205,5 @@
       }
     }
   },
-  "defaultProject": "core-aot"
+  "defaultProject": "angular-plugin-architecture"
 }
