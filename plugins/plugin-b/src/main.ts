@@ -1,1 +1,1 @@
-export { PluginAModule } from './app/plugin-b.module';
+export { PluginBModule } from './app/plugin-b.module';

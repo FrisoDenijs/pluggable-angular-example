@@ -12027,10 +12027,10 @@ var VERSION = new core.Version('5.2.0');
 var appRoutes = [
     { path: 'plugin-b', component: PluginBComponent }
 ];
-var PluginAModule = /** @class */ (function () {
-    function PluginAModule() {
+var PluginBModule = /** @class */ (function () {
+    function PluginBModule() {
     }
-    PluginAModule = __decorate([
+    PluginBModule = __decorate([
         core.NgModule({
             imports: [
                 common.CommonModule,
@@ -12047,11 +12047,11 @@ var PluginAModule = /** @class */ (function () {
                     multi: true
                 }]
         })
-    ], PluginAModule);
-    return PluginAModule;
+    ], PluginBModule);
+    return PluginBModule;
 }());
 
-exports.PluginAModule = PluginAModule;
+exports.PluginBModule = PluginBModule;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

@@ -25,4 +25,4 @@ const appRoutes: Routes = [
      multi: true
    }]
 })
-export class PluginAModule { }
+export class PluginBModule { }
