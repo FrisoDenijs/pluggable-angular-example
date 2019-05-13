@@ -23,6 +23,5 @@
 ## issues
 ### [SystemJS Reference Error](https://stackoverflow.com/questions/53322954/angular-7-error-referenceerror-systemjs-is-not-defined)
 
-*[RESOLVED](https://stackoverflow.com/a/53702437/1984657)*
-
-*[Other Solution](https://github.com/systemjs/systemjs/issues/1940#issuecomment-490280011)*
+- *[RESOLVED](https://stackoverflow.com/a/53702437/1984657)*
+- *[Other Solution](https://github.com/systemjs/systemjs/issues/1940#issuecomment-490280011)*
